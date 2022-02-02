@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    -webkit-font-smoothing: antialiased;
+
+    --purple: hsl(261, 100%, 51%);
+    --grey: hsl(0, 0%, 57%);
+    --darkpurple: hsl(261, 96%, 44%);
+    --darkgrey: hsl(0, 1%, 41%);
+}
+
+body {
+    background-color: #181818;
+
+    font-family: 'Spartan', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+p, a {
+    font-size: 0.875rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+button {
+    border: 0;
+}
+
+header {
+    background-color: #000;
+    
+    margin: 0 auto;
+    padding: 5px 20px;
+
+    width: 100%;
+    
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+main {
+    max-width: 1280px;
+    padding: 0 40px;
+}
+
+main h1 {
+    margin-bottom: 20px;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 80px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding-right: 20px;
+}
+
+.nav-links .assinar {
+    background-color: var(--purple);
+
+    border-radius: 2px;
+    padding: 10px 20px;
+}
+
+.menu-assinatura {
+    display: flex;
+    gap: 1rem;
+}
+
+.netflix-logo, .mobile-netflix-logo {
+    cursor: pointer;
+}
+
+.netflix-logo:hover, .mobile-netflix-logo:hover{
+    transition: 0.1s;
+
+    filter: brightness(80%);
+}
+
+.mobile-netflix-logo {
+    display: none;
+}
+
+.assinar:hover {
+    background-color: var(--darkpurple);
+
+    cursor: pointer;
+}
+
+.nav-links .login {
+    border: 1px solid var(--grey);
+    background-color: #000;
+
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.login:hover {
+    background-color: var(--grey);
+    color: #000;
+
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.texto-inicial {
+    margin-top: 100px;
+    margin-bottom: 40px;
+
+    max-width: 600px;
+}
+
+.texto-inicial h1 {
+    margin-bottom: 10px;
+}
+
+.carrossel {
+    width: 100%;
+}
+
+.carrossel h3 {
+    margin-bottom: 20px;
+}
+
+.item-imagem {
+    height: 100%;
+    width: 100%;
+    
+    display: block;
+}
+
+.assinatura {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.assinatura-lead {
+    margin-top: 15%;
+    margin-bottom: 20%;
+    padding: 0 20px;
+
+    max-width: 700px;
+
+    text-align: center;
+}
+
+.assinatura-lead h2 {
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.assinatura-lead h3 {
+    margin-top: 20px;
+
+    font-weight: 500;
+}
+
+.assinatura-lead button {
+    background-color: var(--purple);
+
+    border-radius: 2px;
+
+    padding: 15px 40px;
+    margin-top: 20px;
+
+    font-size: 1.2rem;
+}
+
+.assinatura-lead button:hover {
+    background-color: var(--darkpurple);
+
+    cursor: pointer;
+}
+
+.extras {
+    width: 80%;
+}
+
+.extras > a {
+    display: block;
+    margin-bottom: 40px;
+}
+
+.extras a {
+    color: var(--darkgrey);
+}
+
+.extras a:hover {
+    cursor: pointer;
+
+    text-decoration:underline;
+}
+
+.lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: .5rem;
+    align-items: center;
+}
+
+.lista li a {
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        padding-left: 0;
+    }
+    
+    .nav-links a {
+        display: none;
+    }
+
+    .netflix-logo {
+        display: none;
+    }
+
+    .mobile-netflix-logo {
+        display: block;
+        padding-left: 0;
+    }
+
+    .extras {
+        width: 100%;
+    }
+
+    .lista {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .extras a {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    header {
+        padding: 0;
+    }
+
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        padding: 10px;
+    }
+
+    .menu-assinatura {
+        margin-left: 20px;
+    }
+
+    .texto-inicial {
+        margin-top: 200px;
+    }
+}
